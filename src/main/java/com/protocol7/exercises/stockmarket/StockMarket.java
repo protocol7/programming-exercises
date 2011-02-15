@@ -29,10 +29,10 @@ public class StockMarket {
     }
 
     public static class Delta {
-        public int startPos;
-        public int startValue = Integer.MAX_VALUE;
-        public int endPos;
-        public int endValue = Integer.MIN_VALUE;
+        private int startPos;
+        private int startValue = Integer.MAX_VALUE;
+        private int endPos;
+        private int endValue = Integer.MIN_VALUE;
         
         public Delta(int initPos, int initValue) {
             startPos = initPos;
@@ -49,6 +49,21 @@ public class StockMarket {
         public int delta() {
             return endValue - startValue;
         }
-        
+
+        public int getStartPos() {
+            return startPos;
+        }
+
+        public int getStartValue() {
+            return startValue;
+        }
+
+        public int getEndPos() {
+            return endPos;
+        }
+
+        public int getEndValue() {
+            return endValue;
+        }
     }
 }
